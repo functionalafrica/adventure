@@ -1,0 +1,1 @@
+{"modules":[{"id":"adventure/core","name":"Adventure","sources":["src/core"],"artifact":"adventure.jar","main":"adventure.run"}]}

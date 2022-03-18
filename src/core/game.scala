@@ -49,7 +49,7 @@ object Game:
     loop(update(state, parse(StdIn.readLine)))
 
   def parse(command: String): Action =
-    command.split(" ").to(List).filterNot(_.isEmpty).map(_.toLowerCase) match
+    command.split(" ").nn.to(List).map(_.nn).filterNot(_.isEmpty).map(_.toLowerCase.nn) match
       case "take" :: Item(item) :: Nil     => Take(item)
       case "drop" :: Item(item) :: Nil     => Drop(item)
       case Direction(d) :: _               => Move(d)
@@ -128,5 +128,5 @@ object Game:
   lazy val well: Room = Room("""It is dark.""", () => Map())
     
   lazy val keys = Item("keys", "a bunch of keys")
-  lazy val lamp = Item("lamp", "a small brass lamp here")
+  lazy val lamp = Item("lamp", "a small brass lamp")
   lazy val bottle = Item("bottle", "an empty bottle")
